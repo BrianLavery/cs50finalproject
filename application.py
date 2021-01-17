@@ -5,7 +5,7 @@ from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 import re
 
-from helper import apology
+from helper import apology, login_required, authorise
 
 # Configure application
 app = Flask(__name__)
@@ -39,7 +39,7 @@ db = SQL("sqlite:///database.db")
 
 
 @app.route("/")
-##@login_required
+@login_required
 def index():
     return render_template("index.html")
 
@@ -159,3 +159,27 @@ def logout():
 
     # Redirect user to home page
     return redirect("/")
+
+
+
+
+
+
+@app.route("/google", methods=["GET", "POST"])
+@login_required
+def google():
+    """User authorises google account via the Gmail API"""
+
+
+
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        authorise()
+
+        # Redirect user to Google page
+        return redirect("/google")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("google.html")
