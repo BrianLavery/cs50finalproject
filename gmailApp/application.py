@@ -76,14 +76,14 @@ def register():
 
         # Check password has required characters (uppercase, lowercase, special character & numeric value)
         # (1) ReGex to check if a string contains uppercase, lowercase special character & numeric value
-        regex = ("^(?=.*[a-z])(?=." + "*[A-Z])(?=.*\\d)" + "(?=.*[-+_!@#$%^&*., ?]).+$")
+        #regex = ("^(?=.*[a-z])(?=." + "*[A-Z])(?=.*\\d)" + "(?=.*[-+_!@#$%^&*., ?]).+$")
 
         # (2) Compile the ReGex
-        p = re.compile(regex)
+        #p = re.compile(regex)
 
         # (3) Print Yes if string matches ReGex
-        if not (re.search(p, pw)):
-            return apology("passwords must contain an uppercase letter, lowercase letter, special character & numeric value", 403)
+        #if not (re.search(p, pw)):
+        #    return apology("passwords must contain an uppercase letter, lowercase letter, special character & numeric value", 403)
 
         # Check if username already exists
         rows = db.execute("SELECT * FROM users WHERE username = :username", username=request.form.get("username"))

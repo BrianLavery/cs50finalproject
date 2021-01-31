@@ -6,7 +6,7 @@
 
 {% block main %}
     <form action="/register" method="post">
-        
+
         <div class="form-group">
             <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
         </div>
@@ -14,16 +14,16 @@
         <div class="form-group">
             <input class="form-control" name="password" placeholder="Password" type="password">
         </div>
-        
+
         <div class="form-group">
             <input class="form-control" name="confirmation" placeholder="Confirmation" type="password">
         </div>
-        
+
         <div class="form-group">
         <caption style="text-align:right">Passwords must contain a lowercase letter, uppercase letter, a numeric value and a special character</caption>
         </div>
-        
-        <button class="btn btn-primary" type="submit">Log In</button>
-    
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+
     </form>
 {% endblock %}
