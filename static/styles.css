@@ -1,0 +1,77 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .brown
+{
+    color: #8b4513;
+}
+nav .navbar-brand .white
+{
+    color: #ffffff;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.txt-msg
+{
+    font-size: 2vw;
+}
+
+
+.br
+{
+    display: block;
+	margin-bottom: 0em;
+}
+
+.brmedium
+{
+    display: block;
+	margin-bottom: 1em;
+}
+
+.brlarge
+{
+    display: block;
+	margin-bottom: 2em;
+}
+
+.brslimtop
+{
+    display: block;
+	margin-top: -1em;
+}

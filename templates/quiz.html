@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block main %}
+
+    <span class="brslimtop"></span>
+
+    <h2 style="text-align:left;">
+        Select the country that satisfies these 3 metrics
+    </h2>
+
+    <span class="brlarge"></span>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3>
+                {{ metricName1 }}
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <h3>
+                {{ metricName2 }}
+            </h3>
+        </div>
+        <div class="col-md-4">
+            <h3>
+                {{ metricName3 }}
+            </h3>
+        </div>
+    </div>
+
+    <span class="br"></span>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>
+                <button type="button" class="btn btn-light btn-lg" disabled>{{ metric1 }}</button>
+                <br>
+            </h2>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                <button type="button" class="btn btn-light btn-lg" disabled>{{ metric2 }}</button>
+                <br>
+            </h2>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                <button type="button" class="btn btn-light btn-lg" disabled>{{ metric3 }}</button>
+                <br>
+            </h2>
+        </div>
+    </div>
+
+    <span class="brmedium"></span>
+
+    <div class="row">
+        <form action="/quiz" method="POST" style="margin-left: auto; margin-right: auto">
+            <button class="btn btn-outline-primary" for="btn-check-outlined" type="submit" name="option1" value="{{ country1 }}">{{ country1 }}</label>
+        </form>
+    </div>
+
+    <span class="brmedium"></span>
+
+    <div class="row">
+        <form action="/quiz" method="POST" style="margin-left: auto; margin-right: auto">
+            <button class="btn btn-outline-primary" for="btn-check-outlined" type="submit" name="option2" value="{{ country2 }}">{{ country2 }}</label>
+        </form>
+    </div>
+
+    <span class="brmedium"></span>
+
+    <div class="row">
+        <form action="/quiz" method="POST" style="margin-left: auto; margin-right: auto">
+            <button class="btn btn-outline-primary" for="btn-check-outlined" type="submit" name="option3" value="{{ country3 }}">{{ country3 }}</label>
+        </form>
+    </div>
+
+    <span class="brmedium"></span>
+
+    <div class="row">
+        <form action="/quiz" method="POST" style="margin-left: auto; margin-right: auto">
+            <button class="btn btn-outline-primary" for="btn-check-outlined" type="submit" name="option4" value="{{ country4 }}">{{ country4 }}</label>
+        </form>
+    </div>
+
+{% endblock %}
