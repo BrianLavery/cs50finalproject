@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+
+    <h1 style="text-align:left;">
+        Your score was {{ score }} out of 10
+
+        <br>
+
+        Submit your name below to see the leaderboard
+    </h1>
+
+    <span class="brlarge"></span>
+
+    <form action="/leaderboard" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Your Name" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit results</button>
+    </form>
+
+{% endblock %}
